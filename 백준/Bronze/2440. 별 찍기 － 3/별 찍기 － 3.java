@@ -20,7 +20,7 @@ public class Main {
 
         for (int i = 0; i < n; ++i) {
             bw.write(sb.toString() + "\n");
-            sb.deleteCharAt(0);
+            sb.deleteCharAt(sb.length() - 1);
         }
 
         br.close();
