@@ -11,19 +11,22 @@ class Solution {
         int extIndex = map.get(ext);
         int sortByIndex = map.get(sort_by);
         
-        for (int[] datum : data) {
-            if (datum[extIndex] < val_ext) {
-                list.add(datum);
-            }
-        }
+//         for (int[] datum : data) {
+//             if (datum[extIndex] < val_ext) {
+//                 list.add(datum);
+//             }
+//         }
         
-        list.sort((o1, o2) -> o1[sortByIndex] - o2[sortByIndex]);
+//         list.sort((o1, o2) -> o1[sortByIndex] - o2[sortByIndex]);
         
-        int[][] answer = new int[list.size()][];
+//         int[][] answer = new int[list.size()][];
         
-        for (int i = 0; i < list.size(); ++i) {
-            answer[i] = list.get(i);
-        }
+//         for (int i = 0; i < list.size(); ++i) {
+//             answer[i] = list.get(i);
+//         }
+        
+        int[][] answer = Arrays.stream(data).filter(o1 -> o1[extIndex] < val_ext)
+            .sorted((o1 ,o2) -> o1[sortByIndex]-o2[sortByIndex]).toArray(int[][]::new);
         return answer;
     }
 }
