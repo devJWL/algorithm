@@ -21,14 +21,18 @@ class Solution {
         Queue<Point> q = new LinkedList<>();
         q.add(new Point(y, x));
         visit[y][x] = true;
+        
         while(!q.isEmpty()) {
             Point curr = q.poll();
+            
             for (int dir = 0; dir < 4; ++dir) {
                 int ny = curr.y + dy[dir];
                 int nx = curr.x + dx[dir];
+                
                 if (ny < 0 || ny >= n || nx < 0 || nx >= m) continue;
                 if (maps[ny].charAt(nx) == 'X') continue;
                 if (visit[ny][nx]) continue;
+                
                 q.add(new Point(ny, nx));
                 visit[ny][nx] = true;
                 days += (maps[ny].charAt(nx) - '0');
