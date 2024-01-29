@@ -4,7 +4,7 @@ import java.util.*;
 class Solution {
     
     public int getDays(String day, int month)  {
-        String[] tokens = day.split("\\.");
+        String[] tokens = day.split("[.]");
         int y = Integer.parseInt(tokens[0]);
         int m = Integer.parseInt(tokens[1]) + month;
         int d = Integer.parseInt(tokens[2]);
