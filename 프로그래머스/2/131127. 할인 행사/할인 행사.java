@@ -12,13 +12,11 @@ class Solution {
                 int cnt = map.get(item) - 1;
                 if (cnt == 0 ) {
                     map.remove(item);
-                }
-                else {
+                } else {
                     map.put(item, cnt);
                 }
             }
         }
-
         return map.size() == 0;
     }
 
