@@ -36,6 +36,7 @@ public class Main {
                 int nx = x + dx[dir];
                 if (ny < 0 || ny >= n || nx < 0 || nx >= m) continue;
                 if (map[ny][nx] == '0') continue;
+                if (dist[ny][nx] != 0) continue;
                 if (dist[ny][nx] >= dist[y][x] + 1) continue;
                 q.add(new int[]{ny, nx});
                 dist[ny][nx] = dist[y][x] + 1;
