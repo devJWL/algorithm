@@ -1,7 +1,5 @@
 import java.util.*;
 
-
-
 class Solution {
     public String deleteZero(String s) {
         StringBuffer sb = new StringBuffer();
