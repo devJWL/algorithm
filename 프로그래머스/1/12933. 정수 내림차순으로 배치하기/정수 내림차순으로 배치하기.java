@@ -14,7 +14,6 @@ public class Solution {
                 cnt[i]--;
             }
         }
-        
         return answer;
     }
 }
