@@ -10,9 +10,8 @@ class Solution {
         	String type = clothes[i][1];
         	map.put(type, map.getOrDefault(type, 1) + 1);
         }
-        List<Integer> list = new ArrayList<>(map.values());
         
-        for (int e : list) {
+        for (int e : map.values()) {
         	answer *= e;
         }
         return answer - 1;
