@@ -16,11 +16,9 @@ class Solution {
                 n += pq.poll();
                 k--;
             }
-
             idx++;
         }
         answer = idx;
-
         return answer;
     }
 }
