@@ -4,6 +4,7 @@ class Solution {
     public int solution(int k, int[] tangerine) {
         int answer = 0;
         int count = 0;
+        
         Map<Integer, Integer> map = new HashMap<>();
         for (int tan : tangerine) {
         	map.put(tan, map.getOrDefault(tan, 0) + 1);
@@ -16,6 +17,7 @@ class Solution {
         	count += list.get(answer);
         	++answer;
         }
+        
         return answer;
     }
 }
