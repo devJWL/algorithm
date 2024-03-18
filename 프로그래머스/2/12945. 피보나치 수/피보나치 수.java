@@ -3,9 +3,10 @@ class Solution {
         int answer = 0;
         int first = 0;
         int second = 1;
+        final int div = 1234567;
 
         for (int i = 2; i <= n; ++i){
-            answer = (first %  1234567 + second % 1234567) % 1234567;
+            answer = (first + second) % div;
             first = second;
             second = answer;
         }
