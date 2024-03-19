@@ -1,6 +1,7 @@
 class Solution {
     boolean[] used;
     int answer = 0;
+    
     void BT(int k, int[][] dungeons, int cnt) {
         for (int i = 0; i < dungeons.length; ++i) {
             if (used[i]) continue;
