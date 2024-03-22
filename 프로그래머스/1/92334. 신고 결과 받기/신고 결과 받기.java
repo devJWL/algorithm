@@ -27,6 +27,7 @@ class Solution {
         for (int i = 0; i < id_list.length; ++i) {
             int cnt = 0;
             Set<String> set = reportList.get(id_list[i]);
+            
             for (String id : set) {
                 if (reportedCountMap.get(id) >= k) {
                     ++cnt;
