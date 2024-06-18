@@ -1,25 +1,27 @@
 import java.io.*;
 import java.util.*;
-
-
+import java.util.stream.Collectors;
 
 public class Main {
-    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+  static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+  static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
 
-    public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws IOException {
 
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        int n = Integer.parseInt(st.nextToken());
-        int x = Integer.parseInt(st.nextToken());
-        int[] answer = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).filter(e -> e < x).toArray();
+    String[] nx = br.readLine().split(" ");
+    int n = Integer.parseInt(nx[0]);
+    int x = Integer.parseInt(nx[1]);
+    List<Integer> arr = Arrays.stream(br.readLine().split(" ")).map(Integer::parseInt)
+        .filter(num -> num < x)
+        .collect(Collectors.toList());
 
-        for (int val : answer) {
-            bw.write(val + " ");
-        }
-        br.close();
-        bw.flush();
-        bw.close();
+    for (int a : arr) {
+      bw.write(a + " ");
     }
+
+    br.close();
+    bw.flush();
+    bw.close();
+  }
 }
