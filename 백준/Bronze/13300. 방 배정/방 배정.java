@@ -23,7 +23,7 @@ public class Main {
 
         for (int i = 0; i < 2; ++i) {
             for (int j = 1; j < 7; ++j) {
-                answer += (count[i][j] + 1) / 2;
+                answer += (count[i][j] + k - 1) / k;
             }
         }
 
