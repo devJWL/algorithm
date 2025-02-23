@@ -42,16 +42,18 @@ public class Main {
                 bw.write("error\n");
             } else {
                 bw.write("[");
-                if (!deque.isEmpty()) {
-                    if (dir) {
-                        while(deque.size() > 1) {
-                            bw.write(deque.pollFirst() + ",");
-                        }
+                if (dir) {
+                    while (deque.size() > 1) {
+                        bw.write(deque.pollFirst() + ",");
+                    }
+                    if (!deque.isEmpty()) {
                         bw.write(deque.pollFirst() + "");
-                    } else {
-                        while(deque.size() > 1) {
-                            bw.write(deque.pollLast() + ",");
-                        }
+                    }
+                } else {
+                    while (deque.size() > 1) {
+                        bw.write(deque.pollLast() + ",");
+                    }
+                    if (!deque.isEmpty()) {
                         bw.write(deque.pollLast() + "");
                     }
                 }
