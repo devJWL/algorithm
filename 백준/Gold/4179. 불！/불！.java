@@ -1,9 +1,6 @@
 import java.util.*;
 import java.io.*;
 
-
-
-
 public class Main {
     static int r, c;
     static char[][] map;
@@ -20,9 +17,9 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        String[] input = br.readLine().split(" ");
-        r = Integer.parseInt(input[0]);
-        c = Integer.parseInt(input[1]);
+        int[] rc = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+        r = rc[0];
+        c = rc[1];
         map = new char[r][c];
         dist1 = new int[r][c];
         dist2 = new int[r][c];
